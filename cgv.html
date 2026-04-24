@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Conditions Générales de Vente — MonPetitChantier</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    :root{--terra:#C1593C;--cream:#F5F0E8;--forest:#2D3A2E;--text:#1A1A1A;--muted:#6B8560}
+    body{font-family:"DM Sans",sans-serif;background:var(--cream);color:var(--text);line-height:1.7}
+    nav{position:sticky;top:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:14px 56px;background:rgba(245,240,232,.95);backdrop-filter:blur(8px);border-bottom:1px solid rgba(45,58,46,.08)}
+    .nav-logo{display:flex;align-items:center;gap:12px;text-decoration:none}
+    .nav-logo-text{font-weight:600;font-size:13px;letter-spacing:.12em;text-transform:uppercase;color:var(--terra)}
+    .nav-back{text-decoration:none;color:var(--muted);font-size:14px;font-weight:500;transition:color .2s}
+    .nav-back:hover{color:var(--terra)}
+    .hero{background:var(--forest);padding:80px 56px 60px;text-align:center}
+    .hero-label{font-size:12px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.5);margin-bottom:16px}
+    .hero-title{font-family:"Playfair Display",serif;font-size:clamp(32px,4vw,52px);font-weight:700;color:white;margin-bottom:16px}
+    .hero-date{font-size:14px;color:rgba(255,255,255,.5)}
+    .container{max-width:800px;margin:0 auto;padding:64px 24px 100px}
+    .toc{background:white;border-radius:16px;padding:36px 40px;margin-bottom:52px;box-shadow:0 2px 20px rgba(0,0,0,.06)}
+    .toc-title{font-size:11px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--terra);margin-bottom:20px}
+    .toc ol{padding-left:20px}
+    .toc li{margin-bottom:8px}
+    .toc a{color:var(--text);text-decoration:none;font-size:15px;transition:color .2s}
+    .toc a:hover{color:var(--terra)}
+    .section{margin-bottom:52px}
+    .section-label{font-size:11px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--terra);margin-bottom:12px}
+    .section-title{font-family:"Playfair Display",serif;font-size:28px;font-weight:700;color:var(--text);padding-bottom:20px;border-bottom:1px solid rgba(45,58,46,.12)}
+    .section-content{padding-top:24px}
+    h3{font-size:16px;font-weight:600;color:var(--text);margin:28px 0 10px}
+    p{color:#3a3a3a;font-size:15px;margin-bottom:14px;line-height:1.75}
+    ul{list-style:none;margin:10px 0 18px;padding:0}
+    ul li{padding:6px 0 6px 22px;position:relative;color:#3a3a3a;font-size:15px;line-height:1.6}
+    ul li::before{content:"•";color:var(--terra);position:absolute;left:0;font-weight:700}
+    .note{background:#fef9f5;border-left:3px solid var(--terra);border-radius:0 8px 8px 0;padding:14px 18px;margin:18px 0;font-size:14px;color:#7a4a30;line-height:1.6}
+    .offers{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:24px 0}
+    .offer-card{background:white;border-radius:16px;padding:28px 24px;box-shadow:0 2px 16px rgba(0,0,0,.07);border:2px solid transparent}
+    .offer-card.free{border-color:#e8e4dc}
+    .offer-card.chef{border-color:var(--terra)}
+    .offer-card.maitre{border-color:var(--forest)}
+    .offer-badge{display:inline-block;font-size:11px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;padding:4px 10px;border-radius:6px;margin-bottom:14px}
+    .offer-badge.free{background:#f0ece4;color:#666}
+    .offer-badge.chef{background:#fef0eb;color:var(--terra)}
+    .offer-badge.maitre{background:#e8f0e8;color:var(--forest)}
+    .offer-price{font-family:"Playfair Display",serif;font-size:32px;font-weight:700;color:var(--text);margin-bottom:4px}
+    .offer-price span{font-family:"DM Sans",sans-serif;font-size:14px;font-weight:400;color:#888}
+    .offer-engagement{font-size:12px;color:#999;margin-bottom:16px;font-style:italic}
+    .offer-frais{background:#f7f4ef;border-radius:8px;padding:10px 14px;font-size:13px;color:#555;margin-bottom:16px}
+    .offer-frais strong{color:var(--text)}
+    .offer-features{list-style:none;padding:0;margin:0}
+    .offer-features li{font-size:13px;color:#555;padding:5px 0 5px 18px;position:relative;border-bottom:1px solid #f0ece4}
+    .offer-features li:last-child{border-bottom:none}
+    .offer-features li::before{content:"✓";color:var(--muted);position:absolute;left:0;font-weight:600}
+    table{width:100%;border-collapse:collapse;margin:18px 0 26px;font-size:13px;border-radius:12px;overflow:hidden;box-shadow:0 1px 8px rgba(0,0,0,.06)}
+    thead tr{background:var(--forest);color:white}
+    th{padding:12px 14px;text-align:left;font-weight:600;font-size:12px;letter-spacing:.04em}
+    td{padding:11px 14px;border-bottom:1px solid #ece8e0;color:#3a3a3a;vertical-align:top;line-height:1.5;background:white}
+    tr:last-child td{border-bottom:none}
+    tbody tr:nth-child(even) td{background:#faf8f4}
+    .tag{display:inline-block;background:#f0ece4;color:var(--forest);border-radius:4px;padding:2px 8px;font-size:11px;font-weight:600}
+    footer{text-align:center;padding:32px 20px;border-top:1px solid rgba(45,58,46,.12);color:var(--muted);font-size:13px}
+    footer a{color:var(--terra);text-decoration:none}
+    @media(max-width:700px){
+      nav{padding:14px 20px}
+      .hero{padding:60px 20px 40px}
+      .container{padding:40px 16px 80px}
+      .offers{grid-template-columns:1fr}
+      .toc{padding:24px 20px}
+      table{font-size:12px}
+      th,td{padding:8px 10px}
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a class="nav-logo" href="https://mon-petit-chantier.com">
+    <span class="nav-logo-text">MonPetitChantier</span>
+  </a>
+  <a class="nav-back" href="https://mon-petit-chantier.com">← Retour au site</a>
+</nav>
+
+<div class="hero">
+  <div class="hero-label">Documents légaux</div>
+  <h1 class="hero-title">Conditions Générales de Vente</h1>
+  <div class="hero-date">Dernière mise à jour : 22/04/2026</div>
+</div>
+
+<div class="container">
+
+  <div class="toc">
+    <div class="toc-title">Sommaire</div>
+    <ol>
+      <li><a href="#art1">Vendeur et champ d'application</a></li>
+      <li><a href="#art2">Offres et tarifs</a></li>
+      <li><a href="#art3">Frais de service sur devis</a></li>
+      <li><a href="#art4">Souscription et modalités de paiement</a></li>
+      <li><a href="#art5">Droit de rétractation</a></li>
+      <li><a href="#art6">Résiliation</a></li>
+      <li><a href="#art7">Responsabilité et garanties</a></li>
+      <li><a href="#art8">Litiges et médiation</a></li>
+      <li><a href="#art9">Modifications des CGV</a></li>
+      <li><a href="#art10">Contact</a></li>
+    </ol>
+  </div>
+
+  <!-- Art 1 -->
+  <div class="section" id="art1">
+    <div class="section-label">Article 1</div>
+    <h2 class="section-title">Vendeur et champ d'application</h2>
+    <div class="section-content">
+      <p>Les présentes Conditions Générales de Vente (CGV) régissent les relations commerciales entre MonPetitChantier et tout artisan professionnel souscrivant à un abonnement ou soumis aux frais de service via la plateforme.</p>
+      <ul>
+        <li>Dénomination : MonPetitChantier (entreprise individuelle)</li>
+        <li>SIRET : 10302858500018</li>
+        <li>Responsable : Arthur Luro</li>
+        <li>Email : contact@mon-petit-chantier.com</li>
+      </ul>
+      <p>Les présentes CGV s'appliquent exclusivement aux artisans professionnels immatriculés utilisant la plateforme dans le cadre de leur activité.</p>
+      <div class="note">ℹ️ Ces CGV ne s'appliquent pas aux clients particuliers qui utilisent l'application gratuitement.</div>
+    </div>
+  </div>
+
+  <!-- Art 2 -->
+  <div class="section" id="art2">
+    <div class="section-label">Article 2</div>
+    <h2 class="section-title">Offres et tarifs</h2>
+    <div class="section-content">
+      <p>MonPetitChantier propose trois formules aux artisans :</p>
+
+      <div class="offers">
+
+        <div class="offer-card free">
+          <div class="offer-badge free">Gratuit</div>
+          <div class="offer-price">0€ <span>/mois</span></div>
+          <div class="offer-engagement">Sans engagement</div>
+          <div class="offer-frais">Frais de service : <strong>5% HT</strong><br>Minimum <strong>100€</strong> par devis</div>
+          <ul class="offer-features">
+            <li>Accès à la plateforme</li>
+            <li>Publication de réalisations</li>
+            <li>Réception des demandes clients</li>
+          </ul>
+        </div>
+
+        <div class="offer-card chef">
+          <div class="offer-badge chef">Chef Artisan</div>
+          <div class="offer-price">29,99€ <span>/mois</span></div>
+          <div class="offer-engagement">Engagement 1 an renouvelable</div>
+          <div class="offer-frais">Frais de service : <strong>5% – 10%</strong><br>Minimum <strong>90€</strong> par devis</div>
+          <ul class="offer-features">
+            <li>Notifications prioritaires (zone de chalandise)</li>
+            <li>Publication par l'équipe MPC sur demande</li>
+            <li>Classement Artisan du Mois</li>
+            <li>Remboursé à partir de 2 chantiers</li>
+          </ul>
+        </div>
+
+        <div class="offer-card maitre">
+          <div class="offer-badge maitre">Maître Artisan</div>
+          <div class="offer-price">39,99€ <span>/mois</span></div>
+          <div class="offer-engagement">Sans engagement</div>
+          <div class="offer-frais">Frais de service : <strong>4% HT</strong><br>Minimum <strong>85€</strong> par devis</div>
+          <ul class="offer-features">
+            <li>Accès prioritaire 24h avant les autres</li>
+            <li>Notifications prioritaires (zone de chalandise)</li>
+            <li>Publication par l'équipe MPC sur demande</li>
+            <li>Classement Artisan du Mois</li>
+            <li>Mise en avant page d'accueil</li>
+            <li>Badge Gold / Artisan certifié</li>
+            <li>Planning artisan automatisé</li>
+            <li>Remboursé à partir de 3 chantiers</li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="note">ℹ️ Un classement des artisans est affiché dans l'application, valorisant ceux qui ont les notes les plus élevées rapportées au nombre de chantiers effectués. Il est mis à jour mensuellement.</div>
+    </div>
+  </div>
+
+  <!-- Art 3 -->
+  <div class="section" id="art3">
+    <div class="section-label">Article 3</div>
+    <h2 class="section-title">Frais de service sur devis</h2>
+    <div class="section-content">
+      <p>Pour toutes les formules, des frais de service sont appliqués à chaque devis accepté par un client via la plateforme.</p>
+
+      <table>
+        <thead>
+          <tr><th>Formule</th><th>Taux</th><th>Minimum</th><th>Exemple (devis 2 000€ HT)</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Gratuite</td><td>5% du montant HT</td><td>100€</td><td>100€</td></tr>
+          <tr><td>Chef Artisan</td><td>5% – abattement 10%</td><td>90€</td><td>90€</td></tr>
+          <tr><td>Maître Artisan</td><td>4% du montant HT</td><td>85€</td><td>85€ (min. appliqué)</td></tr>
+        </tbody>
+      </table>
+
+      <p>Les frais de service sont facturés à l'artisan lors de l'acceptation du devis par le client. La facture est émise par MonPetitChantier et transmise par email.</p>
+    </div>
+  </div>
+
+  <!-- Art 4 -->
+  <div class="section" id="art4">
+    <div class="section-label">Article 4</div>
+    <h2 class="section-title">Souscription et modalités de paiement</h2>
+    <div class="section-content">
+      <h3>Souscription</h3>
+      <p>La souscription s'effectue directement depuis l'application MonPetitChantier et prend effet immédiatement à compter du paiement de la première mensualité.</p>
+      <h3>Paiement</h3>
+      <p>Les abonnements sont payables mensuellement par anticipation. <strong>Tout mois entamé est intégralement dû</strong>, même en cas de résiliation en cours de mois.</p>
+      <h3>Reconduction tacite</h3>
+      <p>Les abonnements sont reconduits tacitement chaque mois. L'abonnement Chef Artisan comporte un engagement d'un an : la résiliation avant l'échéance annuelle entraîne le paiement des mensualités restantes dues.</p>
+      <p>L'abonnement Maître Artisan est sans engagement et peut être résilié à tout moment, avec effet à la fin du mois en cours.</p>
+      <h3>Défaut de paiement</h3>
+      <p>En cas de défaut de paiement, MonPetitChantier se réserve le droit de suspendre les fonctionnalités premium et de rétrograder le compte à la formule gratuite jusqu'à régularisation.</p>
+    </div>
+  </div>
+
+  <!-- Art 5 -->
+  <div class="section" id="art5">
+    <div class="section-label">Article 5</div>
+    <h2 class="section-title">Droit de rétractation</h2>
+    <div class="section-content">
+      <p>Conformément à l'article L.221-28 du Code de la consommation, le droit de rétractation ne s'applique pas aux contrats conclus entre professionnels dans le cadre de leur activité commerciale.</p>
+      <p>Les présentes CGV s'adressant exclusivement à des artisans professionnels immatriculés, aucun droit de rétractation de 14 jours n'est applicable.</p>
+      <div class="note">ℹ️ Si vous souscrivez en dehors du cadre de votre activité professionnelle, contactez-nous à contact@mon-petit-chantier.com.</div>
+    </div>
+  </div>
+
+  <!-- Art 6 -->
+  <div class="section" id="art6">
+    <div class="section-label">Article 6</div>
+    <h2 class="section-title">Résiliation</h2>
+    <div class="section-content">
+      <h3>Résiliation par l'artisan</h3>
+      <ul>
+        <li><strong>Maître Artisan (sans engagement)</strong> : résiliable à tout moment depuis l'application, avec effet à la fin du mois en cours</li>
+        <li><strong>Chef Artisan (engagement 1 an)</strong> : résiliable à l'échéance annuelle avec préavis de 30 jours. Toute résiliation anticipée entraîne le paiement des mensualités restantes</li>
+        <li><strong>Formule Gratuite</strong> : suppression du compte possible à tout moment depuis l'application</li>
+      </ul>
+      <h3>Résiliation par MonPetitChantier</h3>
+      <p>MonPetitChantier se réserve le droit de résilier tout abonnement en cas de violation des CGU ou des CGV, de comportement frauduleux ou de défaut de paiement persistant, sans préavis ni remboursement des sommes déjà versées.</p>
+    </div>
+  </div>
+
+  <!-- Art 7 -->
+  <div class="section" id="art7">
+    <div class="section-label">Article 7</div>
+    <h2 class="section-title">Responsabilité et garanties</h2>
+    <div class="section-content">
+      <p>MonPetitChantier s'engage à fournir les services décrits dans les présentes CGV avec le soin raisonnablement attendu d'un prestataire de services numériques.</p>
+      <p>MonPetitChantier ne garantit pas un nombre minimum de demandes clients, de devis ou de chantiers obtenus via la plateforme. Les abonnements donnent accès à des fonctionnalités de visibilité et d'organisation, sans garantie de résultat commercial.</p>
+      <p>La responsabilité de MonPetitChantier est limitée au montant des sommes effectivement versées par l'artisan au cours des 3 derniers mois précédant le fait générateur du litige.</p>
+    </div>
+  </div>
+
+  <!-- Art 8 -->
+  <div class="section" id="art8">
+    <div class="section-label">Article 8</div>
+    <h2 class="section-title">Litiges et médiation</h2>
+    <div class="section-content">
+      <p>En cas de litige, les parties s'engagent à tenter une résolution amiable avant tout recours judiciaire. À défaut de résolution dans un délai de 30 jours, le différend sera soumis aux tribunaux compétents du ressort de Paris.</p>
+      <p>Les présentes CGV sont soumises au droit français.</p>
+    </div>
+  </div>
+
+  <!-- Art 9 -->
+  <div class="section" id="art9">
+    <div class="section-label">Article 9</div>
+    <h2 class="section-title">Modifications des CGV</h2>
+    <div class="section-content">
+      <p>MonPetitChantier se réserve le droit de modifier les présentes CGV à tout moment. Les artisans seront informés par email avec un préavis de 30 jours. La poursuite de l'utilisation de la plateforme vaut acceptation des nouvelles CGV.</p>
+    </div>
+  </div>
+
+  <!-- Art 10 -->
+  <div class="section" id="art10">
+    <div class="section-label">Article 10</div>
+    <h2 class="section-title">Contact</h2>
+    <div class="section-content">
+      <ul>
+        <li>Email : contact@mon-petit-chantier.com</li>
+        <li>Site web : mon-petit-chantier.com</li>
+        <li>SIRET : 10302858500018</li>
+      </ul>
+    </div>
+  </div>
+
+</div>
+
+<footer>
+  <p>© 2026 MonPetitChantier — SIRET : 10302858500018</p>
+  <p style="margin-top:8px"><a href="https://mon-petit-chantier.com">mon-petit-chantier.com</a></p>
+</footer>
+
+</body>
+</html>
