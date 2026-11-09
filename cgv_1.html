@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CGV · MonPetitChantier</title>
+<meta name="description" content="Conditions générales de vente des abonnements artisans MonPetitChantier.">
+<meta name="theme-color" content="#731E30">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#FAF9F6;--card:#FFFFFF;--text:#030303;--muted:#766E63;--primary:#731E30;--secondary:#F0EDE8;--border:#E3DDD3}
+@media (prefers-color-scheme:dark){:root{--bg:hsl(30 10% 10%);--card:hsl(30 10% 14%);--text:#F4F1EC;--muted:#A39A8E;--secondary:hsl(30 10% 18%);--border:hsl(30 10% 22%)}}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--text);font-family:Montserrat,system-ui,sans-serif;line-height:1.7;-webkit-font-smoothing:antialiased}
+a{color:var(--primary)}
+@media (prefers-color-scheme:dark){a{color:#E7A9B6}}
+header.top{position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--bg) 86%,transparent);backdrop-filter:blur(14px);border-bottom:1px solid var(--border)}
+.top .in{max-width:1120px;margin:0 auto;padding:0 20px;display:flex;align-items:center;justify-content:space-between;height:68px}
+.brand{display:flex;align-items:center;gap:10px;font-weight:800;text-decoration:none;font-size:18px;color:var(--text)}
+.mark{width:36px;height:36px;border-radius:11px;background:#731E30;display:grid;place-items:center}
+.back{font-weight:600;font-size:14px;text-decoration:none;color:var(--muted);min-height:44px;display:flex;align-items:center}
+.layout{max-width:1120px;margin:0 auto;padding:48px 20px 80px;display:grid;grid-template-columns:240px 1fr;gap:56px}
+@media (max-width:900px){.layout{grid-template-columns:1fr;gap:24px}.toc{position:static!important}}
+.layout>*{min-width:0}
+.toc{position:sticky;top:96px;align-self:start;font-size:13px}
+.toc p{font-weight:700;margin:0 0 10px}
+.toc ol{margin:0;padding-left:18px;color:var(--muted)}
+.toc a{color:var(--muted);text-decoration:none}
+.toc a:hover{color:var(--text)}
+@media (max-width:900px){.toc{background:var(--card);border:1px solid var(--border);border-radius:20px;padding:20px}}
+h1{font-size:clamp(30px,5vw,44px);line-height:1.12;letter-spacing:-.02em;margin:0 0 10px;font-weight:800}
+.meta{color:var(--muted);font-size:14px;margin:0 0 32px}
+h2{font-size:20px;line-height:1.3;margin:44px 0 12px;font-weight:700;scroll-margin-top:90px}
+h3{font-size:16px;margin:24px 0 8px}
+p,li{font-size:15px}
+article{max-width:760px}
+.card{background:var(--card);border:1px solid var(--border);border-radius:20px;padding:22px 24px;margin:16px 0}
+table{width:100%;border-collapse:collapse;font-size:14px;margin:12px 0}
+th,td{text-align:left;padding:10px 12px;border-bottom:1px solid var(--border);vertical-align:top}
+th{font-weight:700;background:var(--secondary)}
+.tbl{overflow-x:auto;border:1px solid var(--border);border-radius:16px}
+.tbl table{margin:0}
+.ph{background:#FFF3C4;color:#5C4400;border-radius:6px;padding:0 4px;font-weight:600}
+footer{border-top:1px solid var(--border);padding:32px 20px 48px;text-align:center;font-size:14px;color:var(--muted)}
+footer a{color:var(--muted);margin:0 10px;text-decoration:none}
+</style>
+</head>
+<body>
+<header class="top"><div class="in">
+  <a class="brand" href="index.html"><span class="mark" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-7 9 7"/><path d="M5 10v10h14V10"/><path d="M10 20v-6h4v6"/></svg></span>MonPetitChantier</a>
+  <a class="back" href="index.html">← Retour au site</a>
+</div></header>
+
+<div class="layout">
+<nav class="toc" aria-label="Sommaire">
+  <p>Sommaire</p>
+  <ol>
+    <li><a href="#a1">Objet et champ d'application</a></li>
+    <li><a href="#a2">Prestataire</a></li>
+    <li><a href="#a3">Définitions</a></li>
+    <li><a href="#a4">Inscription et vérification</a></li>
+    <li><a href="#a5">Abonnements</a></li>
+    <li><a href="#a6">Prix, facturation, paiement</a></li>
+    <li><a href="#a7">Durée, reconduction, résiliation</a></li>
+    <li><a href="#a8">Retard de paiement</a></li>
+    <li><a href="#a9">Parrainage</a></li>
+    <li><a href="#a10">Programme de fidélité</a></li>
+    <li><a href="#a11">Classement et Artisan du mois</a></li>
+    <li><a href="#a12">Rôle de la plateforme</a></li>
+    <li><a href="#a13">Obligations de l'artisan</a></li>
+    <li><a href="#a14">Contenus et avis</a></li>
+    <li><a href="#a15">Suspension et résiliation pour manquement</a></li>
+    <li><a href="#a16">Responsabilité</a></li>
+    <li><a href="#a17">Données personnelles</a></li>
+    <li><a href="#a18">Propriété intellectuelle</a></li>
+    <li><a href="#a19">Modification des CGV</a></li>
+    <li><a href="#a20">Droit applicable et litiges</a></li>
+  </ol>
+</nav>
+
+<article>
+<h1>Conditions générales de vente</h1>
+<p class="meta">Abonnements professionnels « Chef Artisan » et « Maître Artisan » · Version en vigueur au <span class="ph">[JJ/MM/AAAA]</span></p>
+
+<h2 id="a1">1. Objet et champ d'application</h2>
+<p>Les présentes conditions générales de vente (« CGV ») régissent la souscription et l'utilisation des abonnements payants proposés aux artisans et entreprises du bâtiment (« l'Artisan ») sur l'application et le site MonPetitChantier (« la Plateforme »).</p>
+<p>Elles s'appliquent exclusivement entre professionnels. L'utilisation de la Plateforme par les particuliers est gratuite et régie par les conditions générales d'utilisation.</p>
+<p>Toute souscription d'un abonnement emporte l'acceptation pleine et entière des présentes CGV, qui prévalent sur tout autre document de l'Artisan.</p>
+
+<h2 id="a2">2. Prestataire</h2>
+<div class="card">
+<p style="margin:0">La Plateforme est éditée par la société <b>MonPetitChantier</b>, <span class="ph">[forme : SAS / SASU / SARL]</span> au capital de <span class="ph">[montant]</span> €, immatriculée au RCS de <span class="ph">[ville]</span> sous le numéro <span class="ph">[n° RCS]</span>, dont le siège social est situé <span class="ph">[adresse du siège]</span>, numéro de TVA intracommunautaire <span class="ph">[FR…]</span> (« MonPetitChantier »).</p>
+<p style="margin:10px 0 0">Contact : <a href="mailto:contact@mon-petit-chantier.com">contact@mon-petit-chantier.com</a></p>
+</div>
+
+<h2 id="a3">3. Définitions</h2>
+<ul>
+<li><b>Artisan</b> : professionnel immatriculé (personne physique ou morale) inscrit sur la Plateforme pour proposer ses services.</li>
+<li><b>Client</b> : particulier utilisant la Plateforme pour rechercher un artisan et demander un devis.</li>
+<li><b>Abonnement</b> : formule payante « Chef Artisan » ou « Maître Artisan » décrite à l'article 5.</li>
+<li><b>Compte</b> : espace personnel de l'Artisan sur la Plateforme.</li>
+<li><b>Réalisations</b> : photos et descriptions de chantiers publiées par ou pour l'Artisan.</li>
+</ul>
+
+<h2 id="a4">4. Inscription et vérification</h2>
+<p>Pour s'inscrire, l'Artisan renseigne les informations de son entreprise : dénomination, numéro SIRET, secteur d'activité et zone géographique d'intervention. Il garantit l'exactitude de ces informations et s'engage à les tenir à jour.</p>
+<p>Le badge « Artisan vérifié » est attribué après contrôle par MonPetitChantier d'un extrait Kbis (ou justificatif d'immatriculation équivalent) de moins de 3 mois, d'une attestation d'assurance responsabilité civile décennale en cours de validité lorsque l'activité y est soumise, et d'une attestation d'assurance responsabilité civile professionnelle. MonPetitChantier peut refuser ou retirer le badge si un document est manquant, expiré ou non conforme.</p>
+<p>Le contrôle porte sur l'existence et la validité apparente des documents fournis ; il ne constitue pas une garantie de la qualité des travaux réalisés par l'Artisan.</p>
+
+<h2 id="a5">5. Abonnements</h2>
+<p>MonPetitChantier propose deux formules. Certaines fonctionnalités sont déployées progressivement ; les fonctionnalités accessibles sont celles proposées sur la Plateforme à la date de souscription et pendant la durée de l'Abonnement.</p>
+<div class="tbl"><table>
+<thead><tr><th scope="col"></th><th scope="col">Chef Artisan</th><th scope="col">Maître Artisan</th></tr></thead>
+<tbody>
+<tr><th scope="row">Prix</th><td>69,99 € HT / mois</td><td>89,99 € HT / mois</td></tr>
+<tr><th scope="row">Engagement</th><td>12 mois, renouvelable</td><td>Sans engagement</td></tr>
+<tr><th scope="row">Présence et publication de réalisations</th><td>Oui</td><td>Oui</td></tr>
+<tr><th scope="row">Demandes de devis et devis en ligne</th><td>Oui</td><td>Oui</td></tr>
+<tr><th scope="row">Classement par secteur et « Artisan du mois »</th><td>Éligible</td><td>Éligible</td></tr>
+<tr><th scope="row">Statistiques</th><td>Basiques : chiffre d'affaires, nombre de chantiers</td><td>Avancées : vues, clics, demandes de devis, positionnement par rapport au secteur</td></tr>
+<tr><th scope="row">Accès prioritaire aux nouvelles demandes de sa zone</th><td>—</td><td>Oui</td></tr>
+<tr><th scope="row">Notifications prioritaires des demandes de sa zone</th><td>—</td><td>Oui</td></tr>
+<tr><th scope="row">Publication des chantiers par l'équipe MonPetitChantier</th><td>—</td><td>Oui, sur demande par email</td></tr>
+<tr><th scope="row">Mise en avant sur l'accueil de l'application</th><td>—</td><td>Oui</td></tr>
+<tr><th scope="row">Présence dans la newsletter</th><td>—</td><td>Oui</td></tr>
+<tr><th scope="row">Planning automatisé à partir des devis validés</th><td>—</td><td>Oui</td></tr>
+</tbody></table></div>
+<p>La mise en avant, l'accès prioritaire et la présence dans la newsletter sont des moyens de visibilité ; ils ne garantissent aucun nombre de demandes, de devis acceptés ni de chiffre d'affaires.</p>
+<p>Pour la publication par l'équipe, l'Artisan adresse ses photos et informations à <span class="ph">[adresse email dédiée]</span>. MonPetitChantier publie dans un délai raisonnable et peut refuser un contenu non conforme à l'article 14.</p>
+
+<h3>Changement de formule</h3>
+<p>Le passage de Chef Artisan à Maître Artisan est possible à tout moment et prend effet au début de la période mensuelle suivante. Le passage de Maître Artisan à Chef Artisan ouvre une nouvelle période d'engagement de 12 mois.</p>
+
+<h2 id="a6">6. Prix, facturation et paiement</h2>
+<p>Les prix sont indiqués en euros hors taxes ; la TVA au taux en vigueur s'y ajoute. L'Abonnement est facturé mensuellement, terme à échoir. Une facture est mise à disposition de l'Artisan à chaque échéance.</p>
+<p>Le paiement s'effectue par carte bancaire ou par prélèvement SEPA, via un prestataire de paiement sécurisé, en dehors de l'application. MonPetitChantier ne conserve pas les données bancaires complètes de l'Artisan.</p>
+<p><b>Chaque mois entamé est dû dans son intégralité</b> et ne donne lieu à aucun remboursement au prorata.</p>
+<p>MonPetitChantier peut faire évoluer ses prix. Toute hausse est notifiée à l'Artisan au moins 30 jours avant son application. Pour la formule Chef Artisan, le nouveau prix s'applique à compter de la période de renouvellement suivante.</p>
+<p>Les règlements des travaux entre Clients et Artisans ne transitent pas par la Plateforme.</p>
+
+<h2 id="a7">7. Durée, reconduction et résiliation</h2>
+<h3>Chef Artisan</h3>
+<p>L'Abonnement est souscrit pour une durée ferme de 12 mois à compter de sa date d'activation, payable mensuellement. Il est ensuite reconduit tacitement par périodes successives de 12 mois, sauf résiliation notifiée par l'Artisan au moins <span class="ph">[30]</span> jours avant la date d'échéance. En cas de résiliation anticipée à l'initiative de l'Artisan, les mensualités restant à courir jusqu'au terme de la période en cours demeurent dues.</p>
+<h3>Maître Artisan</h3>
+<p>L'Abonnement est mensuel et reconduit tacitement chaque mois. Il peut être résilié à tout moment ; la résiliation prend effet à la fin du mois en cours, qui reste dû.</p>
+<h3>Modalités</h3>
+<p>La résiliation s'effectue depuis le Compte lorsque la fonctionnalité est disponible, ou par email à <a href="mailto:contact@mon-petit-chantier.com">contact@mon-petit-chantier.com</a>. Un accusé de réception est envoyé. À la fin de l'Abonnement, l'accès aux fonctionnalités payantes est désactivé ; le profil peut rester consultable dans les conditions prévues par les CGU, ou être supprimé à la demande de l'Artisan.</p>
+
+<h2 id="a8">8. Retard ou défaut de paiement</h2>
+<p>Conformément à l'article L. 441-10 du Code de commerce, tout retard de paiement entraîne de plein droit, sans rappel préalable :</p>
+<ul>
+<li>des pénalités de retard calculées au taux de trois fois le taux d'intérêt légal ;</li>
+<li>une indemnité forfaitaire pour frais de recouvrement de 40 €, sans préjudice d'une indemnisation complémentaire sur justificatifs.</li>
+</ul>
+<p>Aucun escompte n'est accordé pour paiement anticipé. Après mise en demeure restée sans effet pendant 8 jours, MonPetitChantier peut suspendre l'accès aux fonctionnalités payantes jusqu'à régularisation, les sommes restant dues.</p>
+
+<h2 id="a9">9. Parrainage</h2>
+<p>Chaque Artisan reçoit un code de parrainage personnel, construit à partir du nom de sa société suivi de « 10 » (par exemple <b>NOMSOCIETE10</b>). Lorsque le nom est trop long, le code reprend ses 6 premières lettres suivies de « 10 ».</p>
+<p>Lorsqu'un nouvel Artisan (le « filleul ») saisit ce code lors de son inscription, souscrit un Abonnement et <span class="ph">[règle son premier mois]</span>, le parrain bénéficie d'<b>un mois d'Abonnement offert</b>, imputé sur sa prochaine échéance.</p>
+<ul>
+<li>Le parrainage d'une entreprise déjà inscrite, ou de sa propre entreprise sous une autre identité, n'ouvre droit à aucun avantage.</li>
+<li>Les mois offerts ne sont ni remboursables, ni convertibles en numéraire, ni cessibles.</li>
+<li>MonPetitChantier peut annuler les avantages obtenus de manière abusive ou frauduleuse.</li>
+</ul>
+
+<h2 id="a10">10. Programme de fidélité</h2>
+<p>L'Artisan abonné sans interruption bénéficie d'un abattement sur le prix HT de ses mensualités, selon son ancienneté :</p>
+<div class="tbl"><table>
+<thead><tr><th scope="col">Ancienneté continue</th><th scope="col">Niveau</th><th scope="col">Abattement</th></tr></thead>
+<tbody>
+<tr><td>6 mois</td><td>Niveau 1</td><td>2 %</td></tr>
+<tr><td>12 mois</td><td>Niveau 2</td><td>3 %</td></tr>
+<tr><td>18 mois</td><td>Niveau 3</td><td>5 %</td></tr>
+<tr><td>24 mois et plus</td><td>Niveau 4</td><td>7 %</td></tr>
+</tbody></table></div>
+<p>L'abattement s'applique à compter de la mensualité suivant le palier atteint. Les niveaux ne se cumulent pas entre eux : seul le niveau atteint s'applique. Toute résiliation ou suspension pour impayé remet l'ancienneté à zéro.</p>
+
+<h2 id="a11">11. Classement et Artisan du mois</h2>
+<p>La Plateforme affiche un classement des Artisans par secteur d'activité, établi à partir de leur note moyenne rapportée au nombre de chantiers réalisés via la Plateforme.</p>
+<p>Chaque mois, un « Artisan du mois » est désigné parmi les Artisans abonnés, sur la base de la note moyenne obtenue au cours du mois précédent. Il bénéficie d'un shooting photo offert de l'un de ses chantiers, à une date et dans une zone convenues avec MonPetitChantier. Les photos peuvent être utilisées par l'Artisan sur ses propres supports et réseaux sociaux, et par MonPetitChantier pour la promotion de la Plateforme.</p>
+<p>Les critères détaillés de classement sont consultables sur demande. MonPetitChantier peut exclure du classement un Artisan dont les avis font l'objet d'une manipulation avérée.</p>
+
+<h2 id="a12">12. Rôle de la plateforme</h2>
+<p>MonPetitChantier est un service de mise en relation et d'outils de gestion (vitrine, demandes de devis, devis en ligne, agenda). MonPetitChantier n'est pas partie aux contrats de travaux conclus entre Clients et Artisans, n'intervient pas dans leur exécution et n'encaisse aucun paiement à ce titre.</p>
+<p>L'Artisan reste seul responsable de ses devis, de ses prix, de l'exécution de ses travaux, de ses assurances et du respect de la réglementation applicable à son activité.</p>
+
+<h2 id="a13">13. Obligations de l'artisan</h2>
+<ul>
+<li>Fournir des informations et documents exacts, à jour et le concernant personnellement.</li>
+<li>Informer sans délai MonPetitChantier de toute expiration ou résiliation de ses assurances.</li>
+<li>Ne publier que des réalisations qu'il a effectivement effectuées et dont il détient les droits.</li>
+<li>Répondre aux Clients avec professionnalisme et respecter ses engagements.</li>
+<li>Ne pas contourner la Plateforme de manière déloyale ni utiliser les coordonnées des Clients à d'autres fins que leur demande.</li>
+<li>Préserver la confidentialité de ses identifiants.</li>
+</ul>
+
+<h2 id="a14">14. Contenus et avis</h2>
+<p>En publiant des Réalisations, l'Artisan concède à MonPetitChantier une licence non exclusive, gratuite, pour le monde entier et pour la durée de l'Abonnement augmentée de <span class="ph">[12]</span> mois, d'utilisation, de reproduction et d'adaptation de ces contenus sur la Plateforme et dans ses supports de communication.</p>
+<p>Les avis sont déposés par les Clients à l'issue d'un chantier. L'Artisan ne peut ni rédiger, ni acheter, ni solliciter de faux avis. MonPetitChantier peut retirer tout contenu illicite, trompeur ou contraire aux présentes CGV, et traite les signalements dans les conditions prévues par la réglementation applicable.</p>
+
+<h2 id="a15">15. Suspension et résiliation pour manquement</h2>
+<p>En cas de manquement grave de l'Artisan (documents falsifiés, faux avis, fraude, comportement abusif envers un Client, impayé persistant), MonPetitChantier peut suspendre le Compte puis résilier l'Abonnement de plein droit, après notification restée sans effet pendant 8 jours, ou sans délai en cas de fraude avérée. Les sommes échues restent dues ; pour la formule Chef Artisan, les mensualités restant à courir jusqu'au terme de la période d'engagement deviennent exigibles.</p>
+
+<h2 id="a16">16. Responsabilité</h2>
+<p>MonPetitChantier est tenue d'une obligation de moyens. Elle met en œuvre les moyens raisonnables pour assurer l'accès à la Plateforme, sans garantir une disponibilité ininterrompue ; des interruptions peuvent intervenir pour maintenance ou en cas d'incident.</p>
+<p>MonPetitChantier ne saurait être responsable des relations contractuelles entre Clients et Artisans, ni des pertes indirectes telles que perte de chiffre d'affaires, de clientèle ou de chance. Sauf faute lourde ou dolosive, sa responsabilité est limitée au montant des sommes payées par l'Artisan au cours des 12 derniers mois.</p>
+
+<h2 id="a17">17. Données personnelles</h2>
+<p>Les traitements de données personnelles sont décrits dans la <a href="privacy.html">politique de confidentialité</a>. L'Artisan dispose notamment de droits d'accès, de rectification, d'effacement et d'opposition, qu'il exerce à <a href="mailto:contact@mon-petit-chantier.com">contact@mon-petit-chantier.com</a>.</p>
+
+<h2 id="a18">18. Propriété intellectuelle</h2>
+<p>La Plateforme, sa marque, son logo, ses interfaces et ses contenus propres sont la propriété de MonPetitChantier. L'Abonnement confère à l'Artisan un droit d'utilisation personnel, non exclusif et non cessible, limité à sa durée.</p>
+
+<h2 id="a19">19. Modification des CGV</h2>
+<p>MonPetitChantier peut modifier les présentes CGV. Les modifications sont notifiées à l'Artisan au moins 30 jours avant leur entrée en vigueur. L'Artisan qui les refuse peut résilier son Abonnement avant cette date, sans pénalité au titre de la période d'engagement en cours.</p>
+
+<h2 id="a20">20. Droit applicable et litiges</h2>
+<p>Les présentes CGV sont soumises au droit français. Les parties rechercheront d'abord une solution amiable. À défaut, tout litige relatif à leur formation, interprétation ou exécution relève de la compétence exclusive du tribunal de commerce de <span class="ph">[ville du siège]</span>, y compris en cas de pluralité de défendeurs ou d'appel en garantie.</p>
+</article>
+</div>
+
+<footer>
+  <a href="index.html">Accueil</a><a href="legal.html">Mentions légales</a><a href="privacy.html">Confidentialité</a><a href="mailto:contact@mon-petit-chantier.com">Contact</a>
+  <p style="margin:14px 0 0">© MonPetitChantier</p>
+</footer>
+</body>
+</html>
