@@ -234,6 +234,42 @@ footer{background:var(--text);padding:44px 56px}
   .fv{left:-8px}
 }
 @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}html{scroll-behavior:auto}}
+
+/* ABONNEMENTS - formules + boutons Stripe */
+.mp-plans{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:26px}
+.mp-plan{position:relative;background:white;border:1px solid var(--border);border-radius:26px;padding:34px 32px 30px;display:flex;flex-direction:column;box-shadow:0 10px 34px rgba(28,25,23,.06);transition:transform .25s ease,box-shadow .25s ease}
+.mp-plan:hover{transform:translateY(-4px);box-shadow:0 18px 44px rgba(28,25,23,.1)}
+.mp-plan.best{border:2px solid var(--terra);box-shadow:0 18px 48px rgba(115,30,48,.16)}
+.mp-badge{position:absolute;top:-14px;left:30px;background:var(--terra);color:white;font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:7px 14px;border-radius:999px;box-shadow:0 6px 18px rgba(115,30,48,.3)}
+.mp-head{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.mp-name{margin:0;font-size:24px;font-weight:800;letter-spacing:-.01em;color:var(--forest)}
+.mp-pill{font-size:11px;font-weight:700;padding:6px 11px;border-radius:999px;background:#F3EFE8;color:var(--muted);white-space:nowrap}
+.mp-pill.free{background:rgba(61,158,106,.12);color:var(--green)}
+.mp-pitch{font-size:14px;color:var(--muted);line-height:1.6;margin:10px 0 22px;min-height:45px}
+.mp-price{display:flex;align-items:baseline;flex-wrap:wrap;gap:8px;margin-bottom:22px}
+.mp-amt{font-size:46px;font-weight:800;letter-spacing:-.03em;line-height:1;color:var(--forest)}
+.mp-plan.best .mp-amt{color:var(--terra)}
+.mp-per{font-size:14px;font-weight:600;color:var(--muted)}
+.mp-btn{display:flex;align-items:center;justify-content:center;gap:10px;width:100%;min-height:56px;padding:16px 22px;border-radius:18px;font-weight:700;font-size:15px;text-align:center;text-decoration:none;color:white;background:var(--forest);box-shadow:0 8px 24px rgba(28,25,23,.22);transition:transform .2s ease,box-shadow .2s ease}
+.mp-plan.best .mp-btn{background:linear-gradient(135deg,#731E30,#5F1827);box-shadow:0 10px 28px rgba(115,30,48,.35)}
+.mp-btn:hover{transform:translateY(-2px);box-shadow:0 14px 32px rgba(28,25,23,.28)}
+.mp-plan.best .mp-btn:hover{box-shadow:0 14px 34px rgba(115,30,48,.45)}
+.mp-btn svg{width:18px;height:18px;flex:none;transition:transform .2s ease}
+.mp-btn:hover svg{transform:translateX(4px)}
+.mp-btn:focus-visible{outline:3px solid var(--terra-l);outline-offset:3px}
+.mp-secure{display:flex;align-items:center;justify-content:center;gap:6px;font-size:12px;color:var(--muted);margin:10px 0 24px}
+.mp-secure svg{width:13px;height:13px;flex:none}
+.mp-list{list-style:none;display:flex;flex-direction:column;gap:12px;margin:0;padding:22px 0 0;border-top:1px solid var(--border)}
+.mp-list li{position:relative;padding-left:31px;font-size:14.5px;line-height:1.5;color:var(--text)}
+.mp-list li::before{content:"";position:absolute;left:0;top:0;width:21px;height:21px;border-radius:50%;background:rgba(61,158,106,.13) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%233D9E6A' stroke-width='3.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M20 6 9 17l-5-5'/%3E%3C/svg%3E") center/12px no-repeat}
+.mp-perks{margin-top:28px;background:white;border:1px solid var(--border);border-radius:22px;padding:22px 26px;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+.mp-perks-t{grid-column:1/-1;margin:0;font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.mp-perk{display:flex;gap:12px;align-items:flex-start;font-size:13.5px;line-height:1.5;color:var(--muted)}
+.mp-perk b{display:block;font-size:14px;color:var(--forest);margin-bottom:2px}
+.mp-ic{flex:none;width:38px;height:38px;border-radius:12px;background:rgba(115,30,48,.08);color:var(--terra);display:grid;place-items:center}
+.mp-ic svg{width:19px;height:19px}
+@media(max-width:1024px){.mp-plans,.mp-perks{grid-template-columns:1fr}.mp-plan{padding:30px 22px 24px}.mp-pitch{min-height:0}.mp-amt{font-size:40px}}
+@media(prefers-reduced-motion:reduce){.mp-plan,.mp-btn,.mp-btn svg{transition:none}.mp-plan:hover,.mp-btn:hover,.mp-btn:hover svg{transform:none}}
 </style>
 </head>
 <body>
@@ -417,41 +453,52 @@ footer{background:var(--text);padding:44px 56px}
 <section class="rev" id="abonnements">
   <p class="slabel">Abonnements artisans</p>
   <h2 class="stitle">Deux formules pour développer votre activité</h2>
-  <p class="ssub">L'application est gratuite pour les particuliers. Les artisans choisissent leur formule.</p>
-  <div class="rgrid">
-    <div class="rcard">
-      <div class="rtag a">Engagement 12 mois</div>
-      <div class="rname">Chef Artisan</div>
-      <div class="rprice">69,99 € <small>HT / mois</small></div>
-      <ul>
+  <p class="ssub">L'application est gratuite pour les particuliers. Les artisans choisissent leur formule et s'abonnent en ligne en quelques minutes.</p>
+  <div class="mp-plans">
+    <article class="mp-plan">
+      <div class="mp-head">
+        <h3 class="mp-name">Chef Artisan</h3>
+        <span class="mp-pill">Engagement 12 mois</span>
+      </div>
+      <p class="mp-pitch">L'essentiel pour être visible sur l'application et recevoir des demandes de devis.</p>
+      <div class="mp-price"><span class="mp-amt">69,99&nbsp;€</span><span class="mp-per">HT / mois</span></div>
+      <a class="mp-btn" href="https://buy.stripe.com/9B6cN4cjW5uF4Rs6HW4Ja00" target="_blank" rel="noopener" aria-label="S'abonner à la formule Chef Artisan (paiement sécurisé Stripe, nouvel onglet)">S'abonner à Chef Artisan <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
+      <p class="mp-secure"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg> Paiement sécurisé par Stripe</p>
+      <ul class="mp-list">
         <li>Publication de vos réalisations et présence sur l'app</li>
         <li>Demandes de devis et devis en ligne</li>
         <li>Classement « Artisan du mois »</li>
         <li>Statistiques : chiffre d'affaires, nombre de chantiers</li>
+        <li>Engagement 12 mois, renouvelable</li>
       </ul>
-    </div>
-    <div class="rcard best">
-      <div class="rtag c">Sans engagement</div>
-      <div class="rname">Maître Artisan</div>
-      <div class="rprice">89,99 € <small>HT / mois</small></div>
-      <ul>
+    </article>
+    <article class="mp-plan best">
+      <span class="mp-badge">Le plus complet</span>
+      <div class="mp-head">
+        <h3 class="mp-name">Maître Artisan</h3>
+        <span class="mp-pill free">Sans engagement</span>
+      </div>
+      <p class="mp-pitch">Passez en priorité, soyez mis en avant et gagnez du temps au quotidien.</p>
+      <div class="mp-price"><span class="mp-amt">89,99&nbsp;€</span><span class="mp-per">HT / mois</span></div>
+      <a class="mp-btn" href="https://buy.stripe.com/8x228qfw83mx4Rsfes4Ja01" target="_blank" rel="noopener" aria-label="S'abonner à la formule Maître Artisan (paiement sécurisé Stripe, nouvel onglet)">S'abonner à Maître Artisan <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
+      <p class="mp-secure"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg> Paiement sécurisé par Stripe</p>
+      <ul class="mp-list">
         <li>Accès et notifications prioritaires aux demandes de votre zone</li>
         <li>Mise en avant sur l'accueil et dans la newsletter</li>
         <li>Publication de vos chantiers par notre équipe</li>
-        <li>Planning automatisé et statistiques avancées</li>
+        <li>Classement « Artisan du mois »</li>
+        <li>Planning automatisé à partir de vos devis validés</li>
+        <li>Statistiques avancées : vues, clics, demandes de devis, positionnement</li>
       </ul>
-    </div>
-    <div class="rcard">
-      <div class="rtag a">Inclus</div>
-      <div class="rname">Parrainage et fidélité</div>
-      <ul>
-        <li>1 mois offert pour chaque artisan parrainé avec votre code</li>
-        <li>Remise fidélité de 2 % à 7 % selon votre ancienneté (6 à 24 mois)</li>
-        <li>L'Artisan du mois gagne un shooting photo d'un de ses chantiers</li>
-      </ul>
-    </div>
+    </article>
   </div>
-  <p class="rnote">Prix hors taxes. Chaque mois entamé est dû. Conditions complètes dans nos <a href="cgv.html">conditions générales de vente</a>.</p>
+  <div class="mp-perks">
+    <p class="mp-perks-t">Inclus avec votre abonnement</p>
+    <div class="mp-perk"><span class="mp-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="8" width="18" height="4" rx="1"/><path d="M12 8v13"/><path d="M19 12v7a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-7"/><path d="M7.5 8a2.5 2.5 0 0 1 0-5C10 3 12 8 12 8s2-5 4.5-5a2.5 2.5 0 0 1 0 5"/></svg></span><div><b>Parrainage</b>1 mois offert pour chaque artisan parrainé avec votre code</div></div>
+    <div class="mp-perk"><span class="mp-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="6"/><path d="M15.48 12.89 17 22l-5-3-5 3 1.52-9.11"/></svg></span><div><b>Fidélité</b>Remise de 2 % à 7 % selon votre ancienneté (6 à 24 mois)</div></div>
+    <div class="mp-perk"><span class="mp-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3l-2.5-3z"/><circle cx="12" cy="13" r="3"/></svg></span><div><b>Artisan du mois</b>Un shooting photo offert sur l'un de vos chantiers</div></div>
+  </div>
+  <p class="rnote">Prix hors taxes. Chaque mois entamé est dû. En vous abonnant, vous acceptez nos <a href="cgv.html">conditions générales de vente</a>.</p>
 </section>
 
 <section class="cta" id="dl">
