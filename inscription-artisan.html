@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Inscription artisan · MonPetitChantier</title>
+<meta name="description" content="Créez votre compte artisan MonPetitChantier et choisissez votre abonnement.">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#731E30">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#FAF9F6;--card:#FFFFFF;--text:#030303;--muted:#766E63;--border:#E3DDD3;--terra:#731E30;--err:#9B1C1C}
+@media (prefers-color-scheme:dark){:root{--bg:hsl(30 10% 10%);--card:hsl(30 10% 14%);--text:#F4F1EC;--muted:#A39A8E;--border:hsl(30 10% 22%);--err:#F2A7A7}}
+*{box-sizing:border-box}
+body{margin:0;min-height:100vh;display:grid;place-items:center;background:var(--bg);color:var(--text);font-family:Montserrat,system-ui,sans-serif;padding:24px 16px}
+.box{max-width:460px;width:100%;background:var(--card);border:1px solid var(--border);border-radius:24px;padding:32px 24px;box-shadow:0 20px 48px hsl(30 20% 20% / .12)}
+.head{text-align:center}
+img.logo{width:72px;height:72px;border-radius:18px;border:1px solid var(--border);background:#fff}
+h1{font-size:22px;margin:14px 0 6px;letter-spacing:-.02em}
+.sub{color:var(--muted);margin:0 0 22px;font-size:14px}
+.plans{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:20px}
+.plan{position:relative;border:1.5px solid var(--border);border-radius:16px;padding:14px 12px;cursor:pointer;text-align:center}
+.plan input{position:absolute;opacity:0;pointer-events:none}
+.plan b{display:block;font-size:14px}
+.plan span{display:block;font-size:13px;color:var(--muted);margin-top:4px}
+.plan:has(input:checked){border-color:var(--terra);box-shadow:0 0 0 3px hsl(348 59% 28% / .15)}
+label.f{display:block;font-size:13px;font-weight:600;margin:14px 0 6px}
+input.i{width:100%;height:48px;border-radius:12px;border:1px solid var(--border);background:var(--bg);color:var(--text);padding:0 14px;font:inherit;font-size:16px}
+input.i:focus{outline:none;border-color:var(--terra);box-shadow:0 0 0 3px hsl(348 59% 28% / .15)}
+.cgv{display:flex;gap:10px;align-items:flex-start;font-size:13px;color:var(--muted);margin-top:18px}
+.cgv input{margin-top:2px;width:16px;height:16px;accent-color:var(--terra)}
+.cgv a{color:var(--terra);font-weight:600}
+.err{display:none;margin-top:16px;padding:12px 14px;border-radius:12px;background:hsl(0 70% 50% / .08);color:var(--err);font-size:14px}
+button{width:100%;min-height:54px;margin-top:20px;border:0;border-radius:16px;background:var(--terra);color:#fff;font:inherit;font-weight:700;font-size:16px;cursor:pointer}
+button:disabled{opacity:.6;cursor:wait}
+.note{font-size:12px;color:var(--muted);text-align:center;margin:14px 0 0}
+a.back{display:block;text-align:center;margin-top:18px;color:var(--muted);font-size:14px;font-weight:600}
+</style>
+</head>
+<body>
+<main class="box">
+  <div class="head">
+    <img class="logo" src="data:," style="visibility:hidden" alt="Logo MonPetitChantier" width="72" height="72">
+    <h1>Créer mon compte artisan</h1>
+    <p class="sub">Étape 1 sur 2 : votre compte. Étape 2 : paiement sécurisé par Stripe.</p>
+  </div>
+
+  <form id="f" novalidate>
+    <div class="plans" role="radiogroup" aria-label="Formule">
+      <label class="plan"><input type="radio" name="plan" value="chef"><b>Chef Artisan</b><span>69,99 € HT / mois</span></label>
+      <label class="plan"><input type="radio" name="plan" value="maitre"><b>Maître Artisan</b><span>89,99 € HT / mois</span></label>
+    </div>
+
+    <!-- Mêmes champs que l'inscription artisan de l'app -->
+    <label class="f" for="name">Nom complet</label>
+    <input class="i" id="name" type="text" placeholder="Votre nom" autocomplete="name" required>
+
+    <label class="f" for="city">Ville</label>
+    <input class="i" id="city" type="text" placeholder="Votre ville" autocomplete="address-level2" required>
+
+    <label class="f" for="siret">SIRET</label>
+    <input class="i" id="siret" type="text" inputmode="numeric" placeholder="14 chiffres" required>
+
+    <label class="f" for="email">Email</label>
+    <input class="i" id="email" type="email" placeholder="votre@email.com" autocomplete="email" required>
+
+    <label class="f" for="password">Mot de passe</label>
+    <input class="i" id="password" type="password" placeholder="••••••••" autocomplete="new-password" required>
+
+    <label class="f" for="confirm">Confirmer le mot de passe</label>
+    <input class="i" id="confirm" type="password" placeholder="••••••••" autocomplete="new-password" required>
+
+    <label class="cgv"><input type="checkbox" id="cgv"> <span>J'accepte les <a href="cgv.html" target="_blank" rel="noopener">conditions générales de vente</a> de l'abonnement artisan.</span></label>
+
+    <div class="err" id="err" role="alert"></div>
+    <button type="submit" id="btn">Créer mon compte et payer</button>
+    <p class="note">Vous vous connecterez ensuite à l'application avec cet email et ce mot de passe.</p>
+  </form>
+  <a class="back" href="index.html#abonnements">← Retour aux abonnements</a>
+</main>
+
+<script type="module">
+import { initializeApp } from 'https://www.gstatic.com/firebasejs/12.9.0/firebase-app.js';
+import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, sendEmailVerification } from 'https://www.gstatic.com/firebasejs/12.9.0/firebase-auth.js';
+import { getFirestore, doc, getDoc, setDoc } from 'https://www.gstatic.com/firebasejs/12.9.0/firebase-firestore.js';
+
+// Configuration web publique de l'app (identique à VITE_FIREBASE_* de home-project-hub)
+const app = initializeApp({
+  apiKey: 'AIzaSyAQ_tGof4AxinHCPKWAxczCmzvG9cFo8FY',
+  authDomain: 'mpch-59756.firebaseapp.com',
+  projectId: 'mpch-59756',
+  storageBucket: 'mpch-59756.firebasestorage.app',
+  messagingSenderId: '380477679806',
+  appId: '1:380477679806:web:4844db380695c90a6516ef',
+});
+const auth = getAuth(app);
+const db = getFirestore(app);
+auth.languageCode = 'fr';
+
+// Liens de paiement Stripe des deux formules
+const PAYMENT_LINKS = {
+  chef: 'https://buy.stripe.com/9B6cN4cjW5uF4Rs6HW4Ja00',
+  maitre: 'https://buy.stripe.com/8x228qfw83mx4Rsfes4Ja01',
+};
+
+// Même liste que BLOCKED_EMAIL_DOMAINS (src/pages/Auth.tsx)
+const BLOCKED_EMAIL_DOMAINS = new Set([
+  'example.com', 'test.com', 'mailinator.com', 'guerrillamail.com',
+  'tempmail.com', 'throwaway.email', 'yopmail.com', 'trashmail.com',
+  'fakeinbox.com', 'sharklasers.com',
+]);
+
+// Même contrôle que getSiretError (src/lib/siret.ts)
+function luhn(d) { let s = 0; for (let i = 0; i < d.length; i++) { let n = +d[d.length - 1 - i]; if (i % 2) { n *= 2; if (n > 9) n -= 9; } s += n; } return s % 10 === 0; }
+function getSiretError(v) {
+  const d = v.replace(/\s/g, '');
+  if (!d) return 'Le SIRET est obligatoire';
+  if (!/^\d{14}$/.test(d)) return 'Le SIRET doit contenir 14 chiffres';
+  if (!luhn(d)) return 'Le numéro SIRET est invalide';
+  return null;
+}
+
+const $ = (id) => document.getElementById(id);
+const planParam = new URLSearchParams(location.search).get('plan');
+const radio = document.querySelector(`input[name=plan][value="${planParam === 'maitre' ? 'maitre' : 'chef'}"]`);
+radio.checked = true;
+
+function showError(msg) { const e = $('err'); e.textContent = msg; e.style.display = 'block'; e.scrollIntoView({ block: 'center', behavior: 'smooth' }); }
+function authMessage(code) {
+  switch (code) {
+    case 'auth/invalid-email': return 'Adresse email invalide.';
+    case 'auth/weak-password': return 'Le mot de passe doit contenir au moins 6 caractères.';
+    case 'auth/network-request-failed': return 'Connexion impossible. Vérifiez votre réseau.';
+    case 'auth/too-many-requests': return 'Trop de tentatives. Réessayez dans quelques minutes.';
+    default: return 'Une erreur est survenue. Réessayez ou contactez contact.monpetitchantier@gmail.com.';
+  }
+}
+function goToPayment(plan, uid, email) {
+  const url = new URL(PAYMENT_LINKS[plan]);
+  url.searchParams.set('client_reference_id', uid);
+  url.searchParams.set('prefilled_email', email);
+  url.searchParams.set('locale', 'fr');
+  location.href = url.toString();
+}
+
+$('f').addEventListener('submit', async (ev) => {
+  ev.preventDefault();
+  $('err').style.display = 'none';
+  const plan = document.querySelector('input[name=plan]:checked')?.value;
+  const name = $('name').value.trim();
+  const city = $('city').value.trim();
+  const siret = $('siret').value.trim();
+  const email = $('email').value.trim();
+  const password = $('password').value;
+
+  if (!plan) return showError('Choisissez une formule.');
+  if (!name || !city || !email || !password) return showError('Tous les champs sont obligatoires.');
+  if (password !== $('confirm').value) return showError('Les mots de passe ne correspondent pas.');
+  const domain = email.split('@')[1]?.toLowerCase() ?? '';
+  if (BLOCKED_EMAIL_DOMAINS.has(domain)) return showError("Cette adresse email n'est pas acceptée. Utilisez une adresse personnelle valide.");
+  const siretErr = getSiretError(siret);
+  if (siretErr) return showError(siretErr);
+  if (!$('cgv').checked) return showError('Vous devez accepter les conditions générales de vente.');
+  if (!navigator.onLine) return showError('Connexion impossible. Vérifiez votre réseau.');
+
+  const btn = $('btn');
+  btn.disabled = true; btn.textContent = 'Création du compte…';
+  try {
+    let user;
+    try {
+      user = (await createUserWithEmailAndPassword(auth, email, password)).user;
+    } catch (err) {
+      if (err.code !== 'auth/email-already-in-use') throw err;
+      // Compte déjà créé (ex. paiement abandonné) : on reprend avec le même mot de passe.
+      try {
+        user = (await signInWithEmailAndPassword(auth, email, password)).user;
+      } catch {
+        throw { code: 'mpc/exists' };
+      }
+      const snap = await getDoc(doc(db, 'users', user.uid));
+      if (snap.exists() && snap.data().role !== 'artisan') throw { code: 'mpc/not-artisan' };
+      if (snap.exists()) { goToPayment(plan, user.uid, email); return; }
+    }
+
+    // Même document que createUserProfile (src/data/userStore.ts)
+    await setDoc(doc(db, 'users', user.uid), {
+      id: user.uid,
+      role: 'artisan',
+      name,
+      email,
+      city,
+      createdAt: new Date().toISOString(),
+      siret,
+      isPublic: true,
+    });
+    sendEmailVerification(user).catch(() => {});
+    btn.textContent = 'Redirection vers le paiement…';
+    goToPayment(plan, user.uid, email);
+  } catch (err) {
+    btn.disabled = false; btn.textContent = 'Créer mon compte et payer';
+    if (err?.code === 'mpc/exists') return showError('Un compte existe déjà avec cet email. Utilisez le même mot de passe, ou connectez-vous dans l’application.');
+    if (err?.code === 'mpc/not-artisan') return showError('Cet email est associé à un compte particulier. Utilisez une autre adresse pour votre compte artisan.');
+    console.error(err);
+    showError(authMessage(err?.code));
+  }
+});
+</script>
+<script>
+// Logo et favicon repris de telecharger.html (évite de dupliquer les images en base64)
+fetch('telecharger.html').then(function(r){return r.text();}).then(function(t){
+  var icon=t.match(/rel="icon"[^>]*href="(data:image\/png;base64,[^"]+)"/);
+  var logo=t.match(/class="logo" src="(data:image\/png;base64,[^"]+)"/);
+  if(icon){var l=document.createElement('link');l.rel='icon';l.type='image/png';l.href=icon[1];document.head.appendChild(l);}
+  if(logo){document.querySelectorAll('img.logo').forEach(function(i){i.src=logo[1];i.style.visibility='visible';});}
+}).catch(function(){});
+</script>
+</body>
+</html>
